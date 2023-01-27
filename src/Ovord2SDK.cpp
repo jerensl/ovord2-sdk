@@ -1,5 +1,4 @@
-#ifndef Ovord2SDK_h
-#define Ovord2SDK_h
+#include <Ovord2SDK.h>
 #include <Arduino.h>
 #include <HTTPClient.h>
 #include <WiFiClientSecure.h>
@@ -41,7 +40,7 @@ const char* rootCACertificate = \
 "BT02Vf6Dsuimrdfp5gJ0iHRc2jTbkNJtUQoj1iM=\n" \
 "-----END CERTIFICATE-----\n";
 
-Ovord2SDK::Setup(char *shortName, char *token) {
+Ovord2SDK::Ovord2SDK(char *shortName, char *token) {
     this->shortName = shortName;
     this->token = token;
 }
@@ -96,6 +95,3 @@ void Ovord2SDK::sendData(float values[], String sensors[], int size) {
     }
    
 }
-
-
-#endif
