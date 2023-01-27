@@ -1,0 +1,31 @@
+{
+    "name": "Ovord2SDK",
+    "version": "1.0.0",
+    "description": "SDK for connecting with ovord 2 IoT Platform",
+    "keywords": "iot, sdk, platform",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/jerensl/ovord2-sdk.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Jerens Lensun",
+        "email": "jerenslensun@gmail.com",
+        "url": "http://www.jerenslensun.com/",
+        "maintainer": true
+      }
+    ],
+    "export": {
+        "exclude": [
+            "test/*"
+        ]
+    },
+    "license": "MIT",
+    "homepage": "https://www.helloworld.org/",
+    "dependencies": {
+    },
+    "frameworks": ["Arduino"],
+    "platforms": ["espressif32"]
+  }
