@@ -45,7 +45,7 @@ Ovord2SDK::Ovord2SDK(char *shortName, char *token) {
     this->token = token;
 }
 
-void Ovord2SDK::sendData(float values[], String sensors[], int size) {
+void Ovord2SDK::sendData(String sensors[], float values[]) {
     WiFiClientSecure *client = new WiFiClientSecure;
     if(client) {
         client -> setCACert(rootCACertificate);
@@ -55,9 +55,9 @@ void Ovord2SDK::sendData(float values[], String sensors[], int size) {
 
             doc["deviceToken"] = String(token);
             JsonArray sensor = doc.createNestedArray("sensors");
-            for (int i=0; i< size; i++) sensor.add(sensors[i]);
+            for (int i=0; i< sizeof(sensors); i++) sensor.add(sensors[i]);
             JsonArray value = doc.createNestedArray("data");
-            for (int i=0; i< size; i++) value.add(values[i]);
+            for (int i=0; i< sizeof(values); i++) value.add(values[i]);
 
             String data;
             serializeJson(doc, data);

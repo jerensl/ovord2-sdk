@@ -10,7 +10,7 @@ class Ovord2SDK {
     
     public: 
         Ovord2SDK(char *shortName, char *token);
-        void Ovord2SDK::sendData(float values[], String sensors[], int size);
+        void Ovord2SDK::sendData(String sensors[], float values[]);
 };
 
 #endif

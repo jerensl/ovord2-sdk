@@ -1,6 +1,6 @@
 {
     "name": "Ovord2SDK",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "description": "SDK for connecting with ovord 2 IoT Platform",
     "keywords": "iot, sdk, platform",
     "repository":
